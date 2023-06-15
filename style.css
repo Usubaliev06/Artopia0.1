@@ -63,18 +63,40 @@
 header {
   padding: 50px 0px;
 }
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  background-color: #000000;
+  padding: 10px 30px;
+  background-color: #a259ff;
+  border-radius: 20px;
+  display: none;
+}
+.close {
+  text-align: right;
+  margin-right: -20px;
+}
+.open {
+  text-decoration: none;
+  font-size: 90px;
+  display: none;
+}
+.burger > a {
+  text-decoration: none;
+}
 .header-top {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap:300px;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   margin-bottom: 118px;
 }
 .header-top > nav {
   display: flex;
-  gap: 30px ;
+  gap: 30px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -370,6 +392,7 @@ main {
   );
   display: flex;
   align-items: center;
+  z-index: 100;
 }
 .artist-left {
   width: 50%;
@@ -497,6 +520,12 @@ main {
   .header-bottom-des {
     width: 100%;
   }
+  .artist-right {
+    display: none;
+  }
+  .artist-left {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 720px) {
   .artist {
@@ -508,6 +537,30 @@ main {
   .artist-right {
     width: 100%;
   }
+  .artist-right {
+    display: none;
+  }
+  .artist-left {
+    width: 100%;
+  }
+  .header-top > nav {
+    display: none;
+  }
+  .open {
+    display: block;
+  }
+  .header-top > button {
+    padding: 10px 50px;
+  }
 }
 @media screen and (max-width: 576px) {
+  .artist-right {
+    display: none;
+  }
+  .artist-left {
+    width: 100%;
+  }
+  .open {
+    display: block;
+  }
 }
